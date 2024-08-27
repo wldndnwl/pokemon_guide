@@ -10,11 +10,6 @@ function PokemonDetail() {
   // 포켓몬 데이터 찾기
   const pokemon = MOCK_DATA.find((p) => p.id === parseInt(id));
 
-  // 포켓몬이 없으면 에러 메시지
-  if (!pokemon) {
-    return <div>포켓몬을 찾을 수 없습니다.</div>;
-  }
-
   return (
     <div>
       <img src={pokemon.img_url} alt={pokemon.korean_name} />
