@@ -22,7 +22,7 @@ const PokemonList = ({ pokemonList }) => {
         <PokemonCard
           key={pokemon.id}
           pokemon={pokemon}
-          isSelected={selectedPokemon.some((p) => p.id === pokemon.id)}
+          // isSelected={selectedPokemon.some((p) => p.id === pokemon.id)}
           onAdd={addPokemon}
           onRemove={removePokemon}
         />
