@@ -28,21 +28,17 @@ const Dashboard = () => {
   return (
     <DashboardContainer>
       <h2>나만의 포켓몬</h2>
-      {selectedPokemon.length === 0 ? (
-        <p>선택된 포켓몬이 없습니다.</p>
-      ) : (
-        <PokemonList>
-          {selectedPokemon.map((pokemon) => (
-            <PokemonCard
-              key={pokemon.id}
-              pokemon={pokemon}
-              isSelected={true}
-              onAdd={() => {}}
-              onRemove={() => {}}
-            />
-          ))}
-        </PokemonList>
-      )}
+      <PokemonList>
+        {selectedPokemon.map((pokemon) => (
+          <PokemonCard
+            key={pokemon.id}
+            pokemon={pokemon}
+            isSelected={true}
+            onAdd={() => {}}
+            onRemove={() => {}}
+          />
+        ))}
+      </PokemonList>
     </DashboardContainer>
   );
 };
